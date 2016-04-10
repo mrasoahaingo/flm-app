@@ -1,0 +1,22 @@
+{
+  "presets": ["react", "es2015"],
+  "plugins":[
+    "transform-runtime",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    ["babel-plugin-module-alias", [
+      { "src": "./client/src/routes", "expose": "routes" },
+      { "src": "./client/src/store", "expose": "store" },
+      { "src": "./client/src/async", "expose": "async" },
+      { "src": "./client/src/reducers", "expose": "reducers" },
+      { "src": "./client/src/components", "expose": "components" },
+      { "src": "./client/src/containers", "expose": "containers" }
+    ]]
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"]
+    }
+  }
+}
